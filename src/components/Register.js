@@ -4,7 +4,8 @@ class Register extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="col-md-4 offset-4">
+                <div className=" container-fluid col-md-4 col-sm-12 card " style={{height:"auto"}}>
+                    <div className="card-body">
                     <form>
                         <div className="form-group">
                             <div className="form-holder">
@@ -44,6 +45,7 @@ class Register extends React.Component {
                             <button className="form-control btn btn-primary">Register</button>
                         </div>
                     </form>
+                </div>
                 </div>
             </React.Fragment>
         );

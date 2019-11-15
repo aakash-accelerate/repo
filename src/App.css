@@ -11,7 +11,9 @@
 .App-logo {
   height: 40vmin;
 }
-
+.ImageStyle{
+  
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,4 +38,8 @@
   top: 0;
   left: 100%;
   margin-top: -1px;
+}
+.footer{
+  
+  background-color: red;
 }
