@@ -19,17 +19,22 @@ class Navbar extends React.Component {
     }
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark  " style={{backgroundColor: 'rgb(80, 27, 129)'}}>
-                <a className="navbar-brand white" href="/"><img src={Logo} alt=""></img> Navigate Your Next</a>
+            <nav className="navbar navbar-expand-lg navbar-dark  " style={{ backgroundColor: 'rgb(80, 27, 129)' }}>
+                {/* <a className="navbar-brand white" href="/"><img src={Logo} alt="Infosys Logo"></img> Navigate Your Next</a> */}
+                <div className="img-with-text">
+                    <a className="white" href="/">
+                        <img src={Logo} alt="sometext" />
+                        <p>Navigate Your Next</p></a>
+                </div>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon " ></span>
+                    <span className="navbar-toggler-icon " ></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
                             <a className="nav-link white" href="/techstack">Current Tech Stack <span className="sr-only">(current)</span></a>
                         </li>
-                        
+
                         <li className="nav-item dropdown">
                             <a className="nav-link white dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Tech Stack Details
@@ -40,6 +45,7 @@ class Navbar extends React.Component {
                                 <a className="dropdown-item" href="/">Portfolio Name</a>
                                 <a className="dropdown-item" href="/">Portfolio Anchor</a>
                                 <div className="dropdown-divider"></div>
+                                <ul>
                                 <li className="dropdown-submenu">
                                     <a className="dropdown-item dropdown-toggle" href="/">Tech Stack (current)</a>
                                     <ul className="dropdown-menu">
@@ -53,14 +59,15 @@ class Navbar extends React.Component {
                                         <li><a className="dropdown-item" href="/">App Healthchecks and Monitoring</a></li>
                                     </ul>
                                 </li>
+                                </ul>
                             </div>
 
                         </li>
-                       
+
                     </ul>
                     <ul className="navbar-nav ml-auto">
-                        <li><a href="/register" class="btn btn-info" role="button">Register</a></li>&nbsp;
-                        <li><a href="/login" class="btn btn-primary" role="button">Login</a></li>
+                        <li><a href="/register" className="btn btn-info" role="button">Register</a></li>&nbsp;
+                        <li><a href="/login" className="btn btn-primary" role="button">Login</a></li>
                     </ul>
                 </div>
 
