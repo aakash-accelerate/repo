@@ -9,7 +9,7 @@ class TechStack extends React.Component {
   <div className="row">
   <div className="col-xs-12 col-sm-12 col-md-6">
     <div class="card">
-    <h1 class="card-header">Project Registration Form</h1>
+    <h2 class="card-header">Project Registration Form</h2>
     <form >
       <div class="form-group">
         <label>Project Name</label>
@@ -50,7 +50,7 @@ class TechStack extends React.Component {
 
 
   <div class="col-xs-12 col-sm-12 col-md-6 card">
-    <h1>Tech Registration Form</h1>
+    <h2>Tech Registration Form</h2>
     <form >
       <div class="form-group">
         <label>ALM Tool</label>
