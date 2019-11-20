@@ -6,11 +6,13 @@ class TechStack extends React.Component {
             <React.Fragment>
              <div class="container-fluid">
   
+ 
+ 
+  <form className='form'>
   <div className="row">
-  <div className="col-xs-12 col-sm-12 col-md-6">
-    <div class="card">
-    <h2 class="card-header">Project Registration Form</h2>
-    <form >
+    <div class="card col-md-6 card1">
+    <h5 class="card-header">Project Details</h5>
+    
       <div class="form-group">
         <label>Project Name</label>
         <input type="text" class="form-control"  placeholder="Project name"/>
@@ -39,19 +41,22 @@ class TechStack extends React.Component {
         <label>Portfolio Anchor</label>
         <input type="text" class="form-control"  placeholder="Portfolio Anchor"/>
       </div>
-      <button class="btn btn-primary" type="submit">Submit</button>
-    </form>
-    </div>
-  <br/>
+      <br/>
+      <div className='form-group'>
+  <button class="btn btn-primary form-control" type="submit">Submit</button>
   </div>
+  
+    </div>
+  
 
 
 
 
 
-  <div class="col-xs-12 col-sm-12 col-md-6 card">
-    <h2>Tech Registration Form</h2>
-    <form >
+
+  <div class="card col-md-6 card1">
+  <h5 class="card-header">Technical Details</h5>
+    
       <div class="form-group">
         <label>ALM Tool</label>
         <input type="text" class="form-control"  placeholder="ALM Tool"/>
@@ -76,13 +81,19 @@ class TechStack extends React.Component {
         <label>Application Health Check and Monitoring</label>
         <input type="text" class="form-control"  placeholder="Application Health Check and Monitoring"/>
       </div>
-      <button class="btn btn-primary" type="submit">Submit</button>
-    </form>
+      
+  
   <br/>
+ 
+  
   </div>
+  
   </div>
+  
+  </form>
   </div>
-            </React.Fragment>
+  
+    </React.Fragment>
         );
     }
 }
