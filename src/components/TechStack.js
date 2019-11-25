@@ -10,7 +10,7 @@ class TechStack extends React.Component {
  
   <form className='form'>
   <div className="row">
-    <div class="card col-md-6 card1">
+    <div class="card col-md-6 ">
     <h5 class="card-header">Project Details</h5>
     
       <div class="form-group">
@@ -54,16 +54,25 @@ class TechStack extends React.Component {
 
 
 
-  <div class="card col-md-6 card1">
+  <div class="card col-md-6 ">
   <h5 class="card-header">Technical Details</h5>
     
       <div class="form-group">
         <label>ALM Tool</label>
-        <input type="text" class="form-control"  placeholder="ALM Tool"/>
+        <select id="alm" class="form-control" >
+            <option>Jira</option>
+            <option>Rally</option>
+            <option>TFS</option>
+            <option>Any other tool</option>
+          </select>
       </div>
       <div class="form-group">
-        <label>Unit Test Framework</label>
-        <input type="text" class="form-control"  placeholder="Unit Test Framework"/>
+        <label>Unit Testing</label>
+        <select id="unit" class="form-control" >
+            <option>Automated</option>
+            <option>Manual</option>
+           
+          </select>
       </div>
       <div class="form-group">
         <label>Code Profiling Tool</label>
@@ -71,11 +80,19 @@ class TechStack extends React.Component {
       </div>
       <div class="form-group">
         <label>Regression Automation</label>
-        <input type="text" class="form-control"  placeholder="Regression Automation"/>
+        <select id="regression" class="form-control" >
+            <option>Automated</option>
+            <option>Manual</option>
+           
+          </select>
       </div>
       <div class="form-group">
         <label>Deployment</label>
-        <input type="text" class="form-control"  placeholder="Deployment"/>
+        <select id="deployment" class="form-control" >
+            <option>Automated</option>
+            <option>Manual</option>
+           
+          </select>
       </div>
       <div class="form-group">
         <label>Application Health Check and Monitoring</label>

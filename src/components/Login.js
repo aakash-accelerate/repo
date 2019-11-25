@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 class Login extends React.Component {
-    
+
     state = {
         form: {
             email: "",
@@ -17,7 +17,7 @@ class Login extends React.Component {
             buttonActive: false
         },
         errorMessage: "",
-        successMessage:""
+        successMessage: ""
     }
     handleInputChange = (e) => {
         const value = e.target.value;
@@ -66,47 +66,48 @@ class Login extends React.Component {
         event.preventDefault();
         const loginUrl = 'http://localhost:3200/login';
         axios.post(loginUrl, {
-                uEmail: this.state.form.email,
-                uPass: this.state.form.password
+            uEmail: this.state.form.email,
+            uPass: this.state.form.password
         }).then((response) => {
             response = response.data;
             localStorage.setItem('email', this.state.form.email);
             localStorage.setItem('name', response.data.uName);
-            this.setState(()=>({successMessage:"User successfully logged in."}))
+            this.setState(() => ({ successMessage: "User successfully logged in." }))
         }).catch((error) => {
             this.setState(() => ({ errorMessage: error.error }));
         });
     }
-    render(){
+    render() {
         const form = this.state.form;
         const formError = this.state.formError;
-        return(
-<React.Fragment>
-                <i class="fa fa-sign-in" aria-hidden="true"></i>
-                <div className="col-md-4 offset-4">
-                    <form onSubmit={this.submitRegisterUser}>
-                        <div className="form-group">
-                            <div className="form-holder">
-                                <label htmlFor="email">
-                                    Email *
+        return (
+            <React.Fragment>
+                <div className="col-md-4 offset-4 card">
+                    <div className="card-body">
+                        <form onSubmit={this.submitRegisterUser}>
+                            <div className="form-group">
+                                <div className="form-holder">
+                                    <label htmlFor="email">
+                                        Email *
 		  </label>
-                                <input type="text" className="form-control" name="email" id='email' value={form.email} onChange={this.handleInputChange}/>
-                                <span className="text-danger">{formError.email}</span>
+                                    <input type="text" className="form-control" name="email" id='email' value={form.email} onChange={this.handleInputChange} />
+                                    <span className="text-danger">{formError.email}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">
-                                Password
+                            <div className="form-group">
+                                <label htmlFor="password">
+                                    Password
 	                    	</label>
-                            <input type="password" id="password" className="form-control" name="password" value={form.password} onChange={this.handleInputChange}/>
-                            <span className="text-danger">{formError.password}</span>
-                        </div>
-                        <div className="form-group">
-                            <button className="form-control btn btn-primary" disabled={!this.state.formValid.buttonActive}>Login</button>
-                        </div>
-                        {this.state.errorMessage && <div className='text-danger'>{this.state.errorMessage}</div>}
-                        {this.state.successMessage && <div className='text-success'>{this.state.successMessage}</div>}
-                    </form>
+                                <input type="password" id="password" className="form-control" name="password" value={form.password} onChange={this.handleInputChange} />
+                                <span className="text-danger">{formError.password}</span>
+                            </div>
+                            <div className="form-group">
+                                <button className="form-control btn btn-primary" disabled={!this.state.formValid.buttonActive}>Login</button>
+                            </div>
+                            {this.state.errorMessage && <div className='text-danger'>{this.state.errorMessage}</div>}
+                            {this.state.successMessage && <div className='text-success'>{this.state.successMessage}</div>}
+                        </form>
+                    </div>
                 </div>
             </React.Fragment>
         );

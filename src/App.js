@@ -8,6 +8,7 @@ import './App.css';
 import Footer from './components/Footer';
 import Register from './components/Register';
 import TechStack from './components/TechStack';
+import Agile from './components/Agile';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Login from './components/Login';
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
           <Route exact path="/" render={() => <Redirect to="/dashboard"></Redirect>} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/techstack" component={TechStack} />
+          <Route exact path="/agile" component={Agile} />
           <Route exact path="/login" component={Login} />
         </Switch>
         <Footer />

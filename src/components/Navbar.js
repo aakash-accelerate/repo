@@ -34,6 +34,9 @@ class Navbar extends React.Component {
                         <li className="nav-item active">
                             <a className="nav-link white" href="/techstack">Current Tech Stack <span className="sr-only">(current)</span></a>
                         </li>
+                        <li className="nav-item active">
+                            <a className="nav-link white" href="/agile">Agile Assessment <span className="sr-only">(current)</span></a>
+                        </li>
 
                         <li className="nav-item dropdown">
                             <a className="nav-link white dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
